@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Swap - User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Skill Swap</h1>
+        <nav>
+            <button onclick="showSection('register')">Register</button>
+            <button onclick="showSection('login')">Login</button>
+            <button onclick="showSection('profile')">Update Profile</button>
+            <button onclick="showSection('search')">Search for Skills</button>
+            <button onclick="showSection('offer')">Offer/Request Skills</button>
+            <button onclick="showSection('session')">Initiate Session</button>
+            <button onclick="showSection('messages')">Send Messages</button>
+            <button onclick="showSection('feedback')">Give Feedback</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="register" class="hidden">
+            <h2>Register</h2>
+            <input type="text" id="regName" placeholder="Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <button onclick="registerUser()">Register</button>
+        </section>
+
+        <section id="login" class="hidden">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <button onclick="loginUser()">Login</button>
+        </section>
+
+        <section id="profile" class="hidden">
+            <h2>Update Profile</h2>
+            <input type="text" id="updateName" placeholder="New Name">
+            <button onclick="updateProfile()">Update</button>
+        </section>
+
+        <section id="search" class="hidden">
+            <h2>Search for Skills</h2>
+            <input type="text" id="skillSearch" placeholder="Skill">
+            <button onclick="searchSkills()">Search</button>
+        </section>
+
+        <section id="offer" class="hidden">
+            <h2>Offer/Request Skills</h2>
+            <input type="text" id="offerSkill" placeholder="Skill">
+            <button onclick="offerSkill()">Submit</button>
+        </section>
+
+        <section id="session" class="hidden">
+            <h2>Initiate Session</h2>
+            <input type="text" id="sessionDetail" placeholder="Session Details">
+            <button onclick="initiateSession()">Start Session</button>
+        </section>
+
+        <section id="messages" class="hidden">
+            <h2>Send Messages</h2>
+            <textarea id="message" placeholder="Write a message"></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </section>
+
+        <section id="feedback" class="hidden">
+            <h2>Give Feedback</h2>
+            <textarea id="feedbackText" placeholder="Your feedback"></textarea>
+            <button onclick="submitFeedback()">Submit</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
